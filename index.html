@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+  font-family: 'lato', 'Source Sans Pro', sans-serif;
+}
+
+.main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: #ffffff;
+  overflow-y: scroll;
+  font-size: 24px;
+  background-color: #F2789F;
+}
+
+.main::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.main > h1, .main > p {
+  text-align: center;
+  font-size: 35px;
+  z-index: 2;
+  position: relative;
+  font-family: 'lato' ;
+}
+
+.main-content {
+  line-height: 35px;
+  font-size: 18px;
+  display: flex;
+  position: relative;
+  background-color: #FEE3EC;
+  color: #000000;
+  max-width: 650px;
+  flex-direction: column;
+  padding: 60px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  border-radius: 5px;
+  z-index: 2;
+  box-shadow: 0px -1px 10px 5px #FF0075;
+}
+#name, #email, #number, #dropdown, #comment {
+  display: block;
+  width: 100%;
+  height: 35px;
+  padding: 5px 10px;
+  color: #000000;
+  background-color: #ffffff;
+  border: 1px solid #eeeeee;
+  border-radius: 5px;
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+#submit {
+  background-color: #FF0075;
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 0 auto;
+  display: flex;
+  position: relative;
+}
+
+
+
+</style>
+<body>
+    <div class="main">
+        <h1 id=title>AppetiteFoodz Survey Form</h1>
+        <p  id="description">Thank you for taking the time to help us improve the platform.</p>
+      
+        <div class="main-content">
+          <div class="form-content">
+            <form id="survey-form">
+              <label for="name" id="name-label">Name</label>
+              <input id="name" type="text" required placeholder="Enter your name">
+              
+               <label for="email" id="email-label">Email</label>
+              <input id="email" type="email" required placeholder="Enter your Email"> 
+              
+              <label for="number" id="number-label">Number</label>
+              <input id="number" type="number" min="1" max="10" required placeholder="Enter your number"> 
+              
+               <label for="dropdown">Which Option best describes your current role?</label>
+              <select id="dropdown">
+                <option values="student">Student</option>
+                <option values="full-time-learner">Full Time Learner</option>
+                <option values="full-time-job">Full Time Job</option>
+                <option values="prefer-not-to-say">Prefer Not to Say</option>
+                <option values="other">Other</option>
+              </select>
+              
+              <fieldset>
+                <legend>Would you recommend my page to a friend</legend>
+              <input id="definitely" type="radio" name="recommend" value="definitely" checked>
+                 <label for="definitely">Definitely</label><br>
+                
+                <input id="maybe" type="radio" name="recommend" value="maybe">
+                 <label for="maybe">Maybe</label><br>
+                
+                <input id="not-sure" type="radio" name="recommend" value="not-sure">
+                 <label for="not-sure">Not Sure</label>
+            
+              </fieldset>
+              
+              <p>What would you like to see improved? (Check all that apply)</p>
+              <input id="video-length" type="checkbox" name="improve" value="video-length">
+                 <label for="video-length">Video Length</label><br>
+              <input id="picture-quality" type="checkbox" name="improve" value="picture-quality">
+                 <label for="picture-quality">Picture-Quality</label><br>
+              <input id="more-photos" type="checkbox" name="improve" value="more-photos">
+                 <label for="more-photos">Add More Photos</label><br><br>
+              
+               <label for="comment">Any Suggestions or Comments?</label>
+              <textarea row="10" cols="40" id="comment">Enter Your Comment Here......</textarea>
+              
+              <button id="submit" type="submit">Submit</button>
+              
+            </form>
+          </div>
+        </div>
+      </div>
+      
+</body>
+</html>
